@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "sender": "boss@example.com",
+    "subject": "Project Update",
+    "timestamp": "2025-01-03 10:20",
+    "body": "Hey, can you send the weekly update by tomorrow?"
+  },
+  {
+    "id": 2,
+    "sender": "newsletter@tech.io",
+    "subject": "This Week in AI",
+    "timestamp": "2025-01-02 08:00",
+    "body": "Lots of new announcements this week..."
+  }
+]
