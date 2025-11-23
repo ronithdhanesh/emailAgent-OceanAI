@@ -1,0 +1,5 @@
+{
+  "categorization": "Blah blah blah ",
+  "action_item": "Extract action items as JSON with fields 'task' and 'deadline'.",
+  "auto_reply": "Draft replies in a polite, this is soo cool  concise tone."
+}
