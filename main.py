@@ -1,10 +1,22 @@
 import streamlit as st
 import requests
 
-st.title("Prompts system test")
+st.title("Email Inbox")
 
-emails = requests.get("")
+emails = requests.get("http://127.0.0.1:8000/emails").json()
 prompts = requests.get("http://127.0.0.1:8000/prompts").json()
+
+
+# st.write(emails)
+
+for email in emails:
+    st.subheader(email["subject"])
+    st.write(f"From : {email["sender"]}")
+    st.write(email["body"])
+
+
+
+st.title("Prompts System")
 
 st.write(f"Categorization Prompt: {prompts["categorization"]}")
 st.write(f"Action Prompt: {prompts["action_item"]}")
