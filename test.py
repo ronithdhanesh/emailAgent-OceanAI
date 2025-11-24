@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from backend.utils.categorize import load_inbox, load_email, load_prompts, save_processed_emails
+from backend.utils.categorize import load_inbox, load_email, load_prompts, save_processed_emails, load_processed_inbox
 from backend.utils.processor import categorize_email, extract_action_items
 import json
 
@@ -55,6 +55,8 @@ def process_inbox():
 
     return processed
 
-
-
+@app.get("/process_inbox")
+def get_processed_inbox():
+    processed_inbox = load_processed_inbox()
+    return processed_inbox
 

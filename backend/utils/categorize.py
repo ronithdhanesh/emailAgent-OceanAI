@@ -23,5 +23,10 @@ def load_prompts():
     
 
 def save_processed_emails(processed):
-    with open("backend/saved_processed_emails", "w") as f:
+    with open("backend/saved_processed_emails.json", "w") as f:
         json.dump(processed,f,indent=2)
+
+def load_processed_inbox():
+    with open("backend/saved_processed_emails.json", "r") as f:
+        processed_inbox = json.load(f)
+        return processed_inbox
