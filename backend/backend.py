@@ -1,37 +1,65 @@
-import json
 from fastapi import FastAPI, HTTPException
+from utils.categorize import load_inbox, load_email, load_prompts, save_processed_emails, load_processed_inbox
+# from backend.utils.processor import categorize_email, extract_action_items
+from llm_utils.utils import categorize_email, extract_action_items
+import json
+
+
 
 
 app = FastAPI()
 
 @app.get("/emails")
 def get_emails():
-    with open("emails.json","r") as f:
-        inbox = json.load(f)
+    inbox =  load_inbox()
     return inbox
 
 @app.get("/emails/{email_id}")
-def get_email(email_id: int):
-    with open("emails.json", "r") as f:
-        inbox = json.load(f)
-    email = next((e for e in inbox if e["id"] == email_id), None)
-    if email is None:
-        raise HTTPException(status_code=404, detail="Email not found")
+def get_email(email_id:int):
+    email = load_email(email_id)
     return email
-
-
-#PROMPTS -----------------------------------------------------------------
 
 @app.get("/prompts")
 def get_prompts():
-    with open("prompts.json","r") as f:
-        prompts = json.load(f)
-        return prompts
-    
+    prompts = load_prompts()
+    return prompts
+
 
 @app.post("/prompts")
 def update_prompts(prompts: dict):
-    with open("prompts.json", "w") as f:
-        json.dump(prompts,f,indent=2)
+    with open("backend/prompts.json", "w") as f:
+        json.dump(prompts, f, indent=2)
+        return {"status" : "ok"}
 
-    return {"status" : "ok"}
+@app.post("/process_inbox")
+def process_inbox():
+    inbox = load_inbox()
+    prompts = load_prompts()
+
+    processed = []
+
+    for email in inbox:
+        category = categorize_email(email, prompts)
+        action_items = extract_action_items(email, prompts, category)
+
+        email_result = {
+            "id": email["id"],
+            "sender": email["sender"],
+            "subject": email["subject"],
+            "body": email["body"],
+            "timestamp": email["timestamp"],
+            "category": category,
+            "action_items": action_items
+        }
+
+        processed.append(email_result)
+
+    save_processed_emails(processed)
+
+    return processed
+
+@app.get("/process_inbox")
+def get_processed_inbox():
+    processed_inbox = load_processed_inbox()
+    return processed_inbox
+

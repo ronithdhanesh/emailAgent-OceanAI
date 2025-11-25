@@ -2,19 +2,159 @@
   {
     "id": 1,
     "sender": "boss@example.com",
-    "subject": "Project Update",
-    "body": "Hey, can you send the weekly update by tomorrow?",
-    "timestamp": "2025-01-03 10:20",
+    "subject": "Weekly Update",
+    "body": "Hey, can you send me the weekly update when you get a chance?",
+    "timestamp": "2025-01-15 09:10",
+    "category": "To-Do",
+    "action_items": {
+      "task": "send weekly update",
+      "deadline": "no specific deadline mentioned"
+    }
+  },
+  {
+    "id": 2,
+    "sender": "newsletter@techdigest.com",
+    "subject": "Tech Digest - January Edition",
+    "body": "Welcome to this month's Tech Digest! Here are the top stories in AI, robotics, and more.",
+    "timestamp": "2025-01-14 07:20",
+    "category": "Newsletter",
+    "action_items": []
+  },
+  {
+    "id": 3,
+    "sender": "support@randomstore.com",
+    "subject": "Claim Your Free Gift!",
+    "body": "Congratulations! You have been selected to receive a free gift card. Click the link to claim.",
+    "timestamp": "2025-01-12 11:02",
+    "category": "Spam",
+    "action_items": []
+  },
+  {
+    "id": 4,
+    "sender": "hr@example.com",
+    "subject": "Policy Update Reminder",
+    "body": "We want to remind everyone to review the updated company policies shared last week.",
+    "timestamp": "2025-01-10 16:30",
+    "category": "To-Do",
+    "action_items": [
+      {
+        "task": "review the updated company policies",
+        "deadline": "none"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "sender": "client@acmecorp.com",
+    "subject": "Project Concerns",
+    "body": "We have reviewed the initial proposal. Please let us know your thoughts before Friday.",
+    "timestamp": "2025-01-08 14:20",
+    "category": "To-Do",
+    "action_items": {
+      "task": "Provide thoughts on the initial proposal",
+      "deadline": "Friday"
+    }
+  },
+  {
+    "id": 6,
+    "sender": "teammate@example.com",
+    "subject": "Quick Check",
+    "body": "When you're free, could you look at the latest UI changes?",
+    "timestamp": "2025-01-15 13:00",
+    "category": "To-Do",
+    "action_items": {
+      "task": "look at the latest UI changes",
+      "deadline": "no deadline specified"
+    }
+  },
+  {
+    "id": 7,
+    "sender": "boss@example.com",
+    "subject": "URGENT: Deck Needed",
+    "body": "You must complete the onboarding deck by Friday. This is your top priority.",
+    "timestamp": "2025-01-09 08:45",
+    "category": "To-Do",
+    "action_items": {
+      "task": "complete the onboarding deck",
+      "deadline": "Friday"
+    }
+  },
+  {
+    "id": 8,
+    "sender": "events@company.com",
+    "subject": "Upcoming Town Hall",
+    "body": "Join us for the monthly town hall next Tuesday. No action is required.",
+    "timestamp": "2025-01-13 12:25",
     "category": "Important",
     "action_items": []
   },
   {
-    "id": 2,
-    "sender": "newsletter@tech.io",
-    "subject": "This Week in AI",
-    "body": "Lots of new announcements this week...",
-    "timestamp": "2025-01-02 08:00",
+    "id": 9,
+    "sender": "colleague@example.com",
+    "subject": "Lunch?",
+    "body": "Are you free for lunch today?",
+    "timestamp": "2025-01-15 11:40",
+    "category": "To-Do",
+    "action_items": []
+  },
+  {
+    "id": 10,
+    "sender": "ceo@example.com",
+    "subject": "Appreciation Note",
+    "body": "Great job on the Q4 analysis. Your efforts are appreciated!",
+    "timestamp": "2025-01-07 17:15",
     "category": "Important",
     "action_items": []
+  },
+  {
+    "id": 11,
+    "sender": "alerts@bank.com",
+    "subject": "Unusual Activity Detected",
+    "body": "We detected a login attempt from a new device. If this wasn't you, please secure your account.",
+    "timestamp": "2025-01-14 06:50",
+    "category": "Important",
+    "action_items": []
+  },
+  {
+    "id": 12,
+    "sender": "manager@example.com",
+    "subject": "Status Update Request",
+    "body": "Please send me the updated hiring tracker before the meeting tomorrow.",
+    "timestamp": "2025-01-11 15:40",
+    "category": "To-Do",
+    "action_items": {
+      "task": "send updated hiring tracker",
+      "deadline": "tomorrow"
+    }
+  },
+  {
+    "id": 13,
+    "sender": "spamdeals@randompromo.com",
+    "subject": "\u00f0\u0178\u201d\u00a5 90% OFF LIMITED TIME ONLY",
+    "body": "Don't miss out on these unbelievable deals! Click now before it's gone!",
+    "timestamp": "2025-01-13 09:00",
+    "category": "Spam",
+    "action_items": []
+  },
+  {
+    "id": 14,
+    "sender": "friend@gmail.com",
+    "subject": "Photos from the trip",
+    "body": "Hey! Finally sharing the trip photos. Let me know what you think :)",
+    "timestamp": "2025-01-05 20:50",
+    "category": "Important",
+    "action_items": []
+  },
+  {
+    "id": 15,
+    "sender": "projectlead@example.com",
+    "subject": "Meeting Tomorrow",
+    "body": "Can you join the project sync at 3 PM tomorrow? No prep required.",
+    "timestamp": "2025-01-15 08:05",
+    "category": "To-Do",
+    "action_items": {
+      "task": "Join the project sync meeting",
+      "deadline": "Tomorrow at 3 PM"
+    }
   }
 ]

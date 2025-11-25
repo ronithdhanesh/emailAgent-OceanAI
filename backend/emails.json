@@ -2,15 +2,106 @@
   {
     "id": 1,
     "sender": "boss@example.com",
-    "subject": "Project Update",
-    "timestamp": "2025-01-03 10:20",
-    "body": "Hey, can you send the weekly update by tomorrow?"
+    "subject": "Weekly Update",
+    "timestamp": "2025-01-15 09:10",
+    "body": "Hey, can you send me the weekly update when you get a chance?"
   },
   {
     "id": 2,
-    "sender": "newsletter@tech.io",
-    "subject": "This Week in AI",
-    "timestamp": "2025-01-02 08:00",
-    "body": "Lots of new announcements this week..."
+    "sender": "newsletter@techdigest.com",
+    "subject": "Tech Digest - January Edition",
+    "timestamp": "2025-01-14 07:20",
+    "body": "Welcome to this month's Tech Digest! Here are the top stories in AI, robotics, and more."
+  },
+  {
+    "id": 3,
+    "sender": "support@randomstore.com",
+    "subject": "Claim Your Free Gift!",
+    "timestamp": "2025-01-12 11:02",
+    "body": "Congratulations! You have been selected to receive a free gift card. Click the link to claim."
+  },
+  {
+    "id": 4,
+    "sender": "hr@example.com",
+    "subject": "Policy Update Reminder",
+    "timestamp": "2025-01-10 16:30",
+    "body": "We want to remind everyone to review the updated company policies shared last week."
+  },
+  {
+    "id": 5,
+    "sender": "client@acmecorp.com",
+    "subject": "Project Concerns",
+    "timestamp": "2025-01-08 14:20",
+    "body": "We have reviewed the initial proposal. Please let us know your thoughts before Friday."
+  },
+  {
+    "id": 6,
+    "sender": "teammate@example.com",
+    "subject": "Quick Check",
+    "timestamp": "2025-01-15 13:00",
+    "body": "When you're free, could you look at the latest UI changes?"
+  },
+  {
+    "id": 7,
+    "sender": "boss@example.com",
+    "subject": "URGENT: Deck Needed",
+    "timestamp": "2025-01-09 08:45",
+    "body": "You must complete the onboarding deck by Friday. This is your top priority."
+  },
+  {
+    "id": 8,
+    "sender": "events@company.com",
+    "subject": "Upcoming Town Hall",
+    "timestamp": "2025-01-13 12:25",
+    "body": "Join us for the monthly town hall next Tuesday. No action is required."
+  },
+  {
+    "id": 9,
+    "sender": "colleague@example.com",
+    "subject": "Lunch?",
+    "timestamp": "2025-01-15 11:40",
+    "body": "Are you free for lunch today?"
+  },
+  {
+    "id": 10,
+    "sender": "ceo@example.com",
+    "subject": "Appreciation Note",
+    "timestamp": "2025-01-07 17:15",
+    "body": "Great job on the Q4 analysis. Your efforts are appreciated!"
+  },
+  {
+    "id": 11,
+    "sender": "alerts@bank.com",
+    "subject": "Unusual Activity Detected",
+    "timestamp": "2025-01-14 06:50",
+    "body": "We detected a login attempt from a new device. If this wasn't you, please secure your account."
+  },
+  {
+    "id": 12,
+    "sender": "manager@example.com",
+    "subject": "Status Update Request",
+    "timestamp": "2025-01-11 15:40",
+    "body": "Please send me the updated hiring tracker before the meeting tomorrow."
+  },
+  {
+    "id": 13,
+    "sender": "spamdeals@randompromo.com",
+    "subject": "🔥 90% OFF LIMITED TIME ONLY",
+    "timestamp": "2025-01-13 09:00",
+    "body": "Don't miss out on these unbelievable deals! Click now before it's gone!"
+  },
+  {
+    "id": 14,
+    "sender": "friend@gmail.com",
+    "subject": "Photos from the trip",
+    "timestamp": "2025-01-05 20:50",
+    "body": "Hey! Finally sharing the trip photos. Let me know what you think :)"
+  },
+  {
+    "id": 15,
+    "sender": "projectlead@example.com",
+    "subject": "Meeting Tomorrow",
+    "timestamp": "2025-01-15 08:05",
+    "body": "Can you join the project sync at 3 PM tomorrow? No prep required."
   }
 ]

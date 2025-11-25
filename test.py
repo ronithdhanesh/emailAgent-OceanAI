@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from backend.utils.categorize import load_inbox, load_email, load_prompts, save_processed_emails, load_processed_inbox
-from backend.utils.processor import categorize_email, extract_action_items
+# from backend.utils.processor import categorize_email, extract_action_items
+from backend.llm_utils.utils import categorize_email, extract_action_items
 import json
 
 
@@ -37,7 +38,7 @@ def process_inbox():
 
     for email in inbox:
         category = categorize_email(email, prompts)
-        action_items = extract_action_items(email, category, prompts)
+        action_items = extract_action_items(email, prompts, category)
 
         email_result = {
             "id": email["id"],
