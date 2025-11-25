@@ -97,6 +97,41 @@ def extract_action_items(email, prompts, category):
             return []
 
 
+def generate_auto_reply(email, prompts):
+    llm = ChatGroq(model="llama-3.3-70b-versatile", api_key=os.getenv("GROQ_API_KEY"))
+
+    auto_reply_prompt = prompts["auto_reply"]
+
+    email_text = f"""
+        Subject: {email['subject']}
+        From: {email['sender']}
+        Body: {email['body']}
+    """
+
+    prompt = ChatPromptTemplate.from_template("""
+You generate short, professional email replies.
+
+Follow these rules strictly:
+{auto_reply_prompt}
+
+Email you are replying to:
+{email_text}
+
+Return ONLY the reply body. 
+Do NOT include greetings like "Hi," unless needed.
+Do NOT include the sender name.
+Do NOT include markdown.
+    """)
+
+    chain = prompt | llm | StrOutputParser()
+
+    reply_text = chain.invoke({
+        "auto_reply_prompt": auto_reply_prompt,
+        "email_text": email_text
+    }).strip()
+
+    return reply_text
+
 prompts = {
   "categorization": "You are an email categorization model. You must choose exactly ONE of these categories:\n- Important\n- Newsletter\n- Spam\n- To-Do\n\nRules:\n- Only mark an email as To-Do if it VERY CLEARLY says something like: \"Please do this immediately\" or explicitly assigns a task.\n- If the email only mentions general information, reminders, or casual requests, do NOT consider it To-Do.\n- Emails from coworkers, bosses, or clients that do not contain explicit instructions should be marked Important.\n- Company announcements or updates should be Newsletter.\n- Suspicious, promotional, or unwanted content is Spam.\n\nReturn only one category name as a single word.",
 
@@ -124,5 +159,7 @@ email = {
 
 category = categorize_email(email, prompts)
 action_item = extract_action_items(email,prompts, category)
+auto_reply = generate_auto_reply(email, prompts)
 print("CATEGORY:", category)
 print('Action-item:', action_item)
+print('Auto-Reply:', auto_reply)
