@@ -2,10 +2,8 @@ import streamlit as st
 import requests
 from datetime import datetime
 
-# ---------- STYLING ----------
 st.set_page_config(page_title="Smart Inbox AI", layout="wide", page_icon="📨")
 
-# Custom CSS for premium UI
 st.markdown("""
 <style>
     /* Global background */
@@ -46,7 +44,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ---------- API ENDPOINTS ----------
 API = "http://127.0.0.1:8000"
 
 def fetch_json(route):
@@ -66,7 +63,6 @@ def post_json(route, data=None):
         st.error(f"Error posting to {route}: {e}")
         return None
 
-# ---------- SIDEBAR ----------
 with st.sidebar:
     st.markdown("### ✉️ Smart Inbox AI")
     st.write("A modern AI-powered email dashboard.")
@@ -78,7 +74,6 @@ with st.sidebar:
         post_json("/process_inbox")
         st.success("Processed successfully!")
 
-# ---------- PAGE: INBOX ----------
 if page == "Inbox":
     st.markdown("## 📥 Inbox")
 
@@ -100,7 +95,6 @@ if page == "Inbox":
             st.markdown("</div>", unsafe_allow_html=True)
 
 
-# ---------- PAGE: PROCESSED INBOX ----------
 elif page == "Processed Inbox":
     st.markdown("## 🧠 AI Processed Inbox")
 
@@ -125,7 +119,7 @@ elif page == "Processed Inbox":
             <p>{email.get('body', 'No content')}</p>
         """, unsafe_allow_html=True)
 
-        # Action Items
+
         st.subheader("📝 Action Items")
 
         action_items = email.get("action_items", [])
@@ -138,7 +132,6 @@ elif page == "Processed Inbox":
         else:
             st.write("No action items found.")
 
-        # Auto Reply Button
         if st.button(f"Generate Auto-Reply for Email {email.get('id', 'Unknown')}"):
             reply = post_json(f"/auto_reply/{email.get('id')}")
             if reply:
@@ -150,7 +143,6 @@ elif page == "Processed Inbox":
         st.markdown("</div>", unsafe_allow_html=True)
 
 
-# ---------- PAGE: PROMPT SETTINGS ----------
 elif page == "Prompt Settings":
     st.markdown("## 🛠 Prompt Settings")
 

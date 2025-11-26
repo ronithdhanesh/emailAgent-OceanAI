@@ -8,7 +8,7 @@
     "category": "To-Do",
     "action_items": {
       "task": "send weekly update",
-      "deadline": "no specific deadline"
+      "deadline": "no specific deadline mentioned"
     }
   },
   {
@@ -36,10 +36,12 @@
     "body": "We want to remind everyone to review the updated company policies shared last week.",
     "timestamp": "2025-01-10 16:30",
     "category": "To-Do",
-    "action_items": {
-      "task": "review the updated company policies",
-      "deadline": "none"
-    }
+    "action_items": [
+      {
+        "task": "review the updated company policies",
+        "deadline": "none"
+      }
+    ]
   },
   {
     "id": 5,
@@ -49,7 +51,7 @@
     "timestamp": "2025-01-08 14:20",
     "category": "To-Do",
     "action_items": {
-      "task": "let us know your thoughts on the initial proposal",
+      "task": "Provide thoughts on the initial proposal",
       "deadline": "Friday"
     }
   },
@@ -62,7 +64,7 @@
     "category": "To-Do",
     "action_items": {
       "task": "look at the latest UI changes",
-      "deadline": "no deadline specified"
+      "deadline": "none"
     }
   },
   {
@@ -122,7 +124,7 @@
     "category": "To-Do",
     "action_items": {
       "task": "send the updated hiring tracker",
-      "deadline": "tomorrow"
+      "deadline": "before the meeting tomorrow"
     }
   },
   {
@@ -151,8 +153,8 @@
     "timestamp": "2025-01-15 08:05",
     "category": "To-Do",
     "action_items": {
-      "task": "Join the project sync",
-      "deadline": "Tomorrow at 3 PM"
+      "task": "join the project sync",
+      "deadline": "tomorrow at 3 PM"
     }
   }
 ]
